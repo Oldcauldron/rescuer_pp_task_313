@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="webjars/bootstrap/4.5.3/css/bootstrap.min.css" rel="stylesheet">
+    <title>Index</title>
+</head>
+<body class="text-center">
+<h1>Index page</h1>
+
+<!--таблица-->
+<div class="container-fluid">
+
+    <div class="d-flex justify-content-center">
+        <div>
+            <table class="table table-striped" id="mainTableWithUsers">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Login</th>
+                    <th>Password</th>
+                    <th>Age</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--форма заполнения нового юзера и две кнопки-->
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+
+        <div class="form-group align-items-center">
+            <form id="defaultSomeForm" data-hidden=true style="display: none">
+                <input class="form-control" id="AddNewUserLogin" type="text" placeholder="login"><br>
+                <input class="form-control" id="AddNewUserPassword" type="password" placeholder="password"><br>
+                <input class="form-control" id="AddNewUserAge" type="number" placeholder="age"><br>
+                <button class="btn btn-primary mb-2" type="button" id="addNewUserButton">Add new user</button>
+            </form>
+            <div class="p-2">
+                <button class="btn btn-outline-success" id="SliderNewUserForm">Show panel</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--дефолтное модальное окно -->
+<div class="modal fade" id="someDefaultModal" tabindex="-1" role="dialog" aria-labelledby="someDefaultModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+            </div>
+
+            <div class="modal-footer">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="webjars/jquery/3.5.1/jquery.js"></script>
+<script src="webjars/popper.js/1.16.0/umd/popper.js"></script>
+<script src="webjars/bootstrap/4.5.3/js/bootstrap.min.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
